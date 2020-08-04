@@ -1,7 +1,7 @@
 # Proffy
 > Proffy é uma aplicação destinada a profissionais de educação, na qual é possivel realizar o agendamento de aulas.
 
-Neste projeto é possível o profissional de educação criar um calendário com os horários possiveis para agendamento de aulas.
+Neste projeto é possível o profissional de educação criar um calendário com os horários possíveis para agendamento de aulas.
 Além do agendamento é possivel ter uma descrição do conteúno que é ministrado pelo profissional como também o valor de sua hora aula.
 
 ![](https://github.com/AlessandroBorges41/nlw-02/blob/master/proffy/web/img/proffy.PNG?raw=true)
