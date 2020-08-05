@@ -7,7 +7,7 @@ Além do agendamento é possivel ter uma descrição do conteúno que é ministr
 ![](https://github.com/AlessandroBorges41/nlw-02/blob/master/proffy/web/img/proffy.PNG?raw=true)
 
 
-Este projeto foi iniciado com o [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi iniciado com o [Create React App](https://github.com/facebook/create-react-app). Usando conceitos como Mobile First, Single Page Application e outros. 
 
 ## Instalação e Configuração para Desenvolvimento
 
@@ -254,3 +254,18 @@ No caso do Linux e macOS a instalação da expo-cli como global no Yarn apareça
 ### Visual Studio Code
 
 Para a instalação do editor Visual Studio Code, nos três sistemas operacionais [acesse o site](https://code.visualstudio.com/) e baixe a versão para o seu sistema operacional.
+
+
+## Módulos utilizados
+
+ - react-router-dom ( utilizado para trabalhar as routes de navegação )
+    ```sh
+        yarn add react-router-dom
+    ```
+    Adicione também a sua dependência, usando o comando abaixo, veja que foi adicionado no comando o item '-D', isso porque
+    apenas usamos em ambiente de desenvolvimento, não sendo necessário ir para o ambiente de produção ao gerar o build da aplicação.
+    ```sh
+        yarn add  @types/react-router-dom -D 
+    ```
+
+   

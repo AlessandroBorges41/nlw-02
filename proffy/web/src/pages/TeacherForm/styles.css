@@ -1,0 +1,46 @@
+#page-teacher-form  {
+    width: 100vw;
+    height: 100vh;
+}
+
+.page-reader {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary);
+}
+
+.page-reader .top-bar-container {
+   width: 90%;
+   margin: 0 auto;
+   display: flex;
+   justify-self: space-between;
+   color: var(--color-text-in-primary);
+   padding: 1.6rem 0;
+}
+
+.page-reader .top-bar-container a{
+    height: 3.2rem;
+    transition: opacity 0.2s;
+}
+
+.page-reader .top-bar-container a:hover{
+   opacity: 0.6;
+}
+
+/* Pegando a primeira imagem no primeiro nível com uso do atributo ">" */
+.page-reader .top-bar-container > img{
+    height: 1.6rem;
+}
+
+.page-reader .header-content{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    margin: 3.2rem auto;
+ }
+
+ .page-reader .header-content strong{
+    font: 700 3.6rem Archivo Narrow;
+    line-height: 4.2rem;
+    color: var(--color-title-in-primary);
+}
