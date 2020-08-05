@@ -255,7 +255,6 @@ No caso do Linux e macOS a instalação da expo-cli como global no Yarn apareça
 
 Para a instalação do editor Visual Studio Code, nos três sistemas operacionais [acesse o site](https://code.visualstudio.com/) e baixe a versão para o seu sistema operacional.
 
-
 ## Módulos utilizados 
 
 ### Web
@@ -271,8 +270,9 @@ Para a instalação do editor Visual Studio Code, nos três sistemas operacionai
     ```
 
 ### Server
+
     - Para criar o package.json utilizamos o comando abaixo:
-     ```sh
+    ```sh
         yarn init -y 
     ```
     ou, caso esteja usando npm
@@ -282,9 +282,11 @@ Para a instalação do editor Visual Studio Code, nos três sistemas operacionai
     ```
     
     - Para trabalhar com typescript no ambiente server, precisamos instalar em modo desenvolvimento o pacote. Assim execute o comando abaixo:
+
     ```sh
         yarn add typescript -D 
     ```
+
      ou, caso do npm
 
     ```sh
@@ -292,17 +294,20 @@ Para a instalação do editor Visual Studio Code, nos três sistemas operacionai
     ```
 
     - Criando o arquivo de configuração padrão para o Server, execute o comando abaixo:
+
     ```sh
         yarn tsc --init
     ```
-     ou, caso do npm
+    ou, caso do npm
 
     ```sh
         npx tsc --init
     ```
+  
     Obsevação: No arquivo de configuração tscconfig.json precisamos alterar a linha  "target": "es5" para  "target": "es2017", assim estaremos convertendo a funcionalidades até o ECMAScript 2017, ou seja a versão do Javascript lançada em 2017, pois são as funcionalidades que o Node compreende. Para as bibliotecas que forem instaladas com instruções que o Node não interprete o typescript se encarregará de fazer essa interpretação como uma especíe de browser para o Node.
 
     - Instalando a dependência ts-node-dev -D, ela é responsável por excutar as mudanças feitas no código e reinicializar o server de forma automática, caso contrário todas as vezes que for executado uma alteração, temos que parar o server e voltar a inicializar.
+ 
     ```sh
         yarn add ts-node-dev -D
     ```
@@ -311,23 +316,28 @@ Para a instalação do editor Visual Studio Code, nos três sistemas operacionai
     ```sh
         npx install ts-node-dev -D
     ```
+  
     Observação: No arquivo package.json, inclua a sessão, listada abaixo:
+
     ```sh
     "scripts": {
        "start": "tsnd --transpile-only --ignore-watch node_module src/server.ts"
     }, 
     ```
+  
     Explicações: --transpile-only converte o código de Typescript para Javascript sem verificar se existe erro, isso vai acelerar a processo de inicialização do server.
                  --ignore-watch node_module basicamente ignora a conversão de código dentro da pasta node_module, pois são código de terceiros, e não tem porque estar convertendo dentro da aplicação.
                  --respawn responsável por fazer o processo de automatização da reinicialização após a alteração de um código dentro da aplicação. 
 
     Com isso não será necessário todas as vezes que tiver que iniciar o servidor escrever o comando por inteiro, e sim o comando abaixo:
+ 
     ```sh
         yarn start
     ```
     Observação: Para finalizar a execução do server selecione a combinação das teclas Ctrl+C no terminal.
 
     - Instalando o microframework express, com algumas funcionalidades que ajudaram na aplicativo.
+  
     ```sh
         yarn add express
     ```
@@ -337,7 +347,8 @@ Para a instalação do editor Visual Studio Code, nos três sistemas operacionai
     ```
 
     Observação: É necessário instalar em sua aplicação os tipos executados pelo pacote express, assim execute o comando abaixo:
-     ```sh
+   
+    ```sh
         yarn add @types/express -D
     ```
     ou utilizando npm
