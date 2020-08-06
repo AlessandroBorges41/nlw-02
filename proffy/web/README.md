@@ -1,11 +1,25 @@
 # Proffy
 
-    Proffy é uma aplicação destinada a profissionais de educação, na qual é possivel realizar o agendamento de aulas.
+Proffy é uma aplicação destinada a profissionais de educação, na qual é possivel realizar o agendamento de aulas.
 
-    Neste projeto é possível o profissional de educação criar um calendário com os horários possíveis para agendamento de aulas.
-    Além do agendamento é possivel ter uma descrição do conteúno que é ministrado pelo profissional como também o valor de sua hora aula.
+Neste projeto é possível o profissional de educação criar um calendário com os horários possíveis para agendamento de aulas.
+Além do agendamento é possivel ter uma descrição do conteúno que é ministrado pelo profissional como também o valor de sua hora aula.
 
 ![](https://github.com/AlessandroBorges41/nlw-02/blob/master/proffy/web/img/proffy.PNG?raw=true)
+
+## Funcionalidades existentes
+
+### Conexões
+
+- Criação de conexão aluno e professor;
+- Lista quantidade de conexões realizadas;
+
+### Aulas
+
+- Possibilidade de criar aulas;
+- Listar aulas;
+    - Possibilidade de filtrar por matérias, dias da semana e horário;
+
 
 
 Este projeto foi iniciado com o [Create React App](https://github.com/facebook/create-react-app). Usando conceitos como Mobile First, Single Page Application e outros. 
@@ -326,7 +340,7 @@ Neste projeto foram utilizado as versões, seguintes:
 
 ### Server
 
-    - Para criar o package.json utilizamos o comando abaixo:
+ - Para criar o package.json utilizamos o comando abaixo:
 
     ```sh
         yarn init -y 
@@ -338,7 +352,7 @@ Neste projeto foram utilizado as versões, seguintes:
         npm init -y 
     ```
     
-    - Para trabalhar com typescript no ambiente server, precisamos instalar em modo desenvolvimento o pacote. Assim execute o comando abaixo:
+ - Para trabalhar com typescript no ambiente server, precisamos instalar em modo desenvolvimento o pacote. Assim execute o comando abaixo:
 
     ```sh
         yarn add typescript -D 
@@ -350,7 +364,7 @@ Neste projeto foram utilizado as versões, seguintes:
         npm install typescript -D
     ```
 
-    - Criando o arquivo de configuração padrão para o Server, execute o comando abaixo:
+ - Criando o arquivo de configuração padrão para o Server, execute o comando abaixo:
 
     ```sh
         yarn tsc --init
@@ -398,7 +412,7 @@ Neste projeto foram utilizado as versões, seguintes:
 
     Observação: Para finalizar a execução do server selecione a combinação das teclas Ctrl+C no terminal.
 
-    - Instalando o microframework express, com algumas funcionalidades que ajudaram na aplicativo.
+ - Instalando o microframework express, com algumas funcionalidades que ajudaram na aplicativo.
   
     ```sh
         yarn add express
@@ -424,3 +438,21 @@ Neste projeto foram utilizado as versões, seguintes:
 
     Isso é necessário por que quando usamos projetos com typescript alguns pacotes que são instalados não são escritos em typescript 
     assim não é entendido em nossa aplicação, sendo necessário incluir os @types usados por esses pacotes, dessa forma o typescript passa a entender.
+
+- Instalação do banco de dado SQLite, e um pacote de criação de query builder (knex), execute o comando abaixo:
+
+```sh
+    yarn add knex sqlite3
+```
+
+Observação: O uso do pacote knex possibilita escrever sentenças sql em javascript.
+
+- Instalação do pacote CORS, e seus tipos, execute o comando abaixo:
+
+```
+yarn add cors
+
+yarn add @types/cors -D
+```
+
+Observação: O pacote Cors, permite que aplicações em endereço diferentes de http, possam acessar umas as outras.
