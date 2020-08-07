@@ -338,6 +338,12 @@ Neste projeto foram utilizado as versões, seguintes:
         yarn add  @types/react-router-dom -D 
     ```
 
+    Instalação da biblioteca axios, este blilioteca auxilia no consumo de Apis externas.
+   
+   ```
+   yarn add axios
+   ``` 
+
 ### Server
 
  - Para criar o package.json utilizamos o comando abaixo:

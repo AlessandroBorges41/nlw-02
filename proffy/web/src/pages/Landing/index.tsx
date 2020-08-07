@@ -14,11 +14,11 @@ function Landing()
 {
     const [totalConnections, setTotalConnections] = useState(0)
 
-    useEffect(() =>
-    {
-        api.get('connections').then(res =>
+    useEffect(() => {
+        /*Obtendo valor por meio da api no server*/
+        api.get('connections').then(response =>
         {
-            const {total} = res.data
+            const {total} = response.data
             setTotalConnections(total)
         })
     }, [])

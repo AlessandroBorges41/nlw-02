@@ -12,17 +12,17 @@ import warningIcon from "../../assets/images/icons/warning.svg";
 
 const subjects =
 [
+    {value: 'Artes', label: 'Artes'},
+    {value: 'Biologia', label: 'Biologia'},
+    {value: 'Filosofia', label: 'Filosofia'},
     {value: 'Física', label: 'Física'},
+    {value: 'História', label: 'História'},
+    {value: 'Informática', label: 'Informática'},
     {value: 'Química', label: 'Química'},
     {value: 'Matemática', label: 'Matemática'},
-    {value: 'Biologia', label: 'Biologia'},
     {value: 'Português', label: 'Português'},
     {value: 'Redação', label: 'Redação'},
-    {value: 'Literature', label: 'Literature'},
-    {value: 'Artes', label: 'Artes'},
-    {value: 'História', label: 'História'},
     {value: 'Geografia', label: 'Geografia'},
-    {value: 'Filosofia', label: 'Filosofia'},
     {value: 'Sociologia', label: 'Sociologia'},
 ]
 const week_days =
@@ -41,53 +41,58 @@ interface ScheduleItem
     week_day: number
     from: string
     to: string
-}
+};
 
 function TeacherForm()
 {
-    const [name, setName] = useState('')
-    const [avatar, setAvatar] = useState('')
-    const [whatsapp, setWhatsapp] = useState('')
-    const [bio, setBio] = useState('')
+    const [name, setName] = useState('');
+    const [avatar, setAvatar] = useState('');
+    const [whatsapp, setWhatsapp] = useState('');
+    const [bio, setBio] = useState('');
 
-    const [subject, setSubject] = useState('')
-    const [cost, setCost] = useState('')
+    const [subject, setSubject] = useState('');
+    const [cost, setCost] = useState('');
 
-    const [scheduleItems, setScheduleItems] = useState<ScheduleItem[]>([{week_day: 0, from: '', to: ''}])
+    const [scheduleItems, setScheduleItems] = useState<ScheduleItem[]>([{week_day: 0, from: '', to: ''}]);
 
-    const history = useHistory()
+    const history = useHistory();
 
     function addNewScheduleItem()
     {
-        setScheduleItems([...scheduleItems, {week_day: 0, from: '', to: ''}])
-    }
+        setScheduleItems([...scheduleItems, {week_day: 0, from: '', to: ''}]);
+    };
 
     function setScheduledItemValue(position: number, field: string, value: string)
     {
         const updatedScheduleItems = scheduleItems.map((scheduleItem, index) =>
         {
-            if(index === position) return {...scheduleItem, [field]: value}
-            else return scheduleItem
+            if(index === position){
+                return {...scheduleItem, [field]: value};     
+            } 
+            else{
+                return scheduleItem;
+            }; 
         })
-        setScheduleItems(updatedScheduleItems)
-    }
+        setScheduleItems(updatedScheduleItems);
+    };
 
     function handleCreateClass(e: FormEvent)
     {
-        e.preventDefault()
+        /* Mudando o comportamento padrão do formulário para que ao clicar no submite ele seja enviado*/
+        e.preventDefault();
 
         api.post('classes',
         {
             name, avatar, whatsapp, bio, subject, cost: Number(cost), schedule: scheduleItems
         }).then(() =>
         {
-            alert('Cadastro realizado com sucesso!')
-            history.push('/')
+            alert('Cadastro realizado com sucesso!');
+            history.push('/');
         }).catch(() =>
         {
-            alert('Erro no cadastro!')
+            alert('Erro no cadastro!');
         })
-    }
+    };
 
     return (
         <div id="page-teacher-form" className="container">
@@ -190,6 +195,6 @@ function TeacherForm()
             </main>
         </div>
     )
-}
+};
 
 export default TeacherForm
