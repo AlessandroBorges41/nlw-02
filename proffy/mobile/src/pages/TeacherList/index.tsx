@@ -1,8 +1,8 @@
-import React from 'react'
-import { View } from 'react-native'
+import React from 'react';
+import { View } from 'react-native';
 
-import styles from './styles'
-import PageHeader from '../../components/PageHeader'
+import styles from './styles';
+import PageHeader from '../../components/PageHeader';
 
 function TeacherList()
 {
@@ -13,4 +13,4 @@ function TeacherList()
     )
 }
 
-export default TeacherList
+export default TeacherList;

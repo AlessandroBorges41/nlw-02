@@ -4,7 +4,7 @@ const styles = StyleSheet.create(
 {
     container:
     {
-        flex: 1,
+        flex: 1, //Declara que deve ser ocupado todo espaço preenchivel da tela
         backgroundColor: '#8257E5',
         justifyContent: 'space-around',
         padding: 40
@@ -12,8 +12,8 @@ const styles = StyleSheet.create(
 
     banner:
     {
-        width: '100%',
-        resizeMode: 'contain',
+        width: '100%', //Diz o tamanho de lagura que a imagem deve ter dentro da tela
+        resizeMode: 'contain', //Redimenciona a imagem proposcionalmente com todas as partes visiveis sem corte
     },
 
     title:
@@ -32,9 +32,9 @@ const styles = StyleSheet.create(
 
     buttonsContainer:
     {
-        flexDirection: 'row',
+        flexDirection: 'row', //Coloca os botões um ao lado do outro
         marginTop: 40,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between' //Coloca o espaçamento entre os botões ficando cada um em uma extremidade da linha
     },
 
     button:
@@ -43,7 +43,7 @@ const styles = StyleSheet.create(
         width: '48%',
         borderRadius: 8,
         padding: 24,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between' //Alinhamento do texto e botão de forma justificada
     },
 
     buttonPrimary:
@@ -60,7 +60,7 @@ const styles = StyleSheet.create(
     {
         fontFamily: 'Archivo_700Bold',
         color: '#fff',
-        fontSize: 20
+        fontSize: 16 //Tamanho do texto dentro do button
     },
 
     totalConnections:

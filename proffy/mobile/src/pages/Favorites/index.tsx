@@ -1,8 +1,8 @@
-import React from 'react'
-import { View } from 'react-native'
+import React from 'react';
+import { View } from 'react-native';
 
-import styles from './styles'
-import PageHeader from '../../components/PageHeader'
+import styles from './styles';
+import PageHeader from '../../components/PageHeader';
 
 function Favorites()
 {
@@ -13,4 +13,4 @@ function Favorites()
     )
 }
 
-export default Favorites
+export default Favorites;

@@ -1,15 +1,16 @@
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import {Ionicons} from '@expo/vector-icons'
+import {Ionicons} from '@expo/vector-icons';
 
-import TeacherList from '../pages/TeacherList'
-import Favorites from '../pages/Favorites'
+import TeacherList from '../pages/TeacherList';
+import Favorites from '../pages/Favorites';
 
+/* Usado para as navegações via tabs */
 function StudyTabs()
 {
-    const {Navigator, Screen} = createBottomTabNavigator()
-
+    const {Navigator, Screen} = createBottomTabNavigator();
+    
     return (
         <Navigator
             tabBarOptions=
@@ -43,7 +44,7 @@ function StudyTabs()
                 inactiveTintColor: '#c1bccc',
                 activeTintColor: '#32264d'
             }}
-        >
+        > 
             <Screen
                 name="TeacherList"
                 component={TeacherList}

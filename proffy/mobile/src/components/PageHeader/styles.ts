@@ -12,7 +12,7 @@ const styles = StyleSheet.create(
     {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between' //Separa a seta e o texto na barra do cabeçalho colocando ambos nas extremidades opostas 
     },
 
     title:

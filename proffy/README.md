@@ -321,7 +321,42 @@ Neste projeto foram utilizado as versões, seguintes:
     Para a instalação do editor Visual Studio Code, nos três sistemas operacionais [acesse o site](https://code.visualstudio.com/) e baixe a 
     versão para o seu sistema operacional.
 
-## Módulos utilizados 
+## Módulos utilizados
+
+### Mobile
+
+- Instalando fontes google abertas que são usadas no projeto mobile, execute o comando abaixo, dentro do teminal no VS Code do projeto.
+
+```
+expo install expo-font @expo-google-fonts/archivo @expo-google-fonts/poppins
+```
+
+- Instalando React Navigate. 
+O React Navigation é composto por alguns utilitários principais e esses são usados ​​pelos navegadores para criar a estrutura de navegação no seu aplicativo.
+
+```
+yarn add @react-navigation/native
+´´´
+
+Instalando as dependências do react navigate quanto o projeto utiliza expo.
+
+```
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+```
+
+Instalando a Stack navigation Libray. O React Navigation stack fornece uma maneira para o seu aplicativo fazer a transição entre telas e gerenciar o histórico de navegação(uma navegação em pilha), assim execute o comando abaixo:  
+
+```
+yarn add @react-navigation/stack
+```
+
+Instalando a biblioteca de navegação por Tabs. Utilizamos neste projeto, o estilo mais comum de navegação, sendo a navegação baseada em guias. Utilizamos guias na parte inferior da tela. Assim é necessário a instalação da biblioteca, usando o comando abaixo:
+
+```
+yarn add @react-navigation/bottom-tabs
+```
+
+Para mais informação, acesse: [React Navigation](https://reactnavigation.org/docs/).
 
 ### Web
 
@@ -337,6 +372,12 @@ Neste projeto foram utilizado as versões, seguintes:
     ```sh
         yarn add  @types/react-router-dom -D 
     ```
+
+    Instalação da biblioteca axios, este blilioteca auxilia no consumo de Apis externas.
+   
+   ```
+   yarn add axios
+   ``` 
 
 ### Server
 

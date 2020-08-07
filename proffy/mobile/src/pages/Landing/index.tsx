@@ -1,27 +1,32 @@
-import React from 'react'
-import { View, Image, Text } from 'react-native'
-import { RectButton } from 'react-native-gesture-handler'
+import React from 'react';
+import { View, Image, Text } from 'react-native';
 
-import landingImg from '../../assets/images/landing.png'
-import studyIcon from '../../assets/images/icons/study.png'
-import giveClassesIcon from '../../assets/images/icons/give-classes.png'
-import heartIcon from '../../assets/images/icons/heart.png'
+/* Usando RectButton para adaptar o efeito do button para o sistema operacional que está sendo usado*/
+import { RectButton } from 'react-native-gesture-handler';
 
-import styles from  './styles'
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
+
+import landingImg from '../../assets/images/landing.png';
+import studyIcon from '../../assets/images/icons/study.png';
+import giveClassesIcon from '../../assets/images/icons/give-classes.png';
+import heartIcon from '../../assets/images/icons/heart.png';
+
+import styles from  './styles';
+
 
 function Landing()
 {
-    const {navigate} = useNavigation()
+    const {navigate} = useNavigation();
     
+    /*Usado para navegar para rota Study ou GiveClasses*/
     function handleNavigateToStudyPages()
     {
-        navigate('Study')
+        navigate('Study');
     }
 
     function handleNavigateToGiveClassesPage()
     {
-        navigate('GiveClasses')
+        navigate('GiveClasses');
     }
 
     return (
@@ -51,7 +56,7 @@ function Landing()
             </View>
 
             <Text style={styles.totalConnections}>
-                Total de 285 conexões já realizadas {' '}
+                Total de 305 conexões já realizadas {' '}
                 <Image source={heartIcon} />
             </Text>
         </View>
