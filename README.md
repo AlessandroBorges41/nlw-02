@@ -455,4 +455,4 @@ yarn add cors
 yarn add @types/cors -D
 ```
 
-Observação: O pacote Cors, permite que aplicações em endereço diferentes de http, possam acessar umas as outras.
+Observação: O pacote Cors, permite que aplicações em endereço diferentes, possam acessar umas as outras.

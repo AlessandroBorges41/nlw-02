@@ -1,58 +1,75 @@
-
-.page-reader {
+.page-header
+{
     display: flex;
     flex-direction: column;
-    background-color: var(--color-primary);
+    background: var(--color-primary);
 }
 
-.page-reader .top-bar-container {
-   width: 90%;
-   margin: 0 auto;
-   display: flex;
-   justify-self: space-between;
-   color: var(--color-text-in-primary);
-   padding: 1.6rem 0;
+.page-header .top-bar-container
+{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text-in-primary);
+    padding: 1.6rem 0;
 }
 
-.page-reader .top-bar-container a{
+.page-header .top-bar-container a
+{
     height: 3.2rem;
     transition: opacity 0.2s;
 }
 
-.page-reader .top-bar-container a:hover{
-   opacity: 0.6;
+.page-header .top-bar-container a:hover
+{
+    opacity: 0.6;
 }
 
-/* Pegando a primeira imagem no primeiro nível com uso do atributo ">" */
-.page-reader .top-bar-container > img{
+.page-header .top-bar-container > img
+{
     height: 1.6rem;
 }
 
-.page-reader .header-content{
+.page-header .header-content
+{
     width: 90%;
-    margin: 0 auto;
-    position: relative;
     margin: 3.2rem auto;
- }
+    position: relative;
+}
 
- .page-reader .header-content strong{
-    font: 700 3.6rem Archivo Narrow;
+.page-header .header-content strong
+{
+    font: 700 3.6rem Archivo;
     line-height: 4.2rem;
     color: var(--color-title-in-primary);
 }
 
-@media(min-width: 700px){
-    .page-reader{
+.page-header .header-content p
+{
+    max-width: 30rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: var(--color-text-in-primary);
+    margin-top: 2.4rem;
+}
+
+@media (min-width: 700px)
+{
+    .page-header
+    {
         height: 340px;
     }
 
-    /* Pegando a primeira imagem no primeiro nível com uso do atributo ">" */
-    .page-reader .top-bar-container{
+    .page-header .top-bar-container
+    {
         max-width: 1100px;
     }
 
-    .page-reader .header-content{
-        flex:1;
+    .page-header .header-content
+    {
+        flex: 1;
         max-width: 740px;
         margin: 0 auto;
         padding-bottom: 48px;
@@ -62,7 +79,8 @@
         align-items: flex-start;
     }
 
-    .page-reader .header-content strong{
+    .page-header .header-content strong
+    {
         max-width: 350px;
     }
 }

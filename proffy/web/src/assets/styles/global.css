@@ -1,4 +1,5 @@
-:root {
+:root
+{
     --color-background: #F0F0F7;
     --color-primary-lighter: #9871F5;
     --color-primary-light: #916BEA;
@@ -19,40 +20,50 @@
     --color-box-footer: #FAFAFC;
   
     font-size: 60%;
-  }
+}
 
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  html, body, #root{
-      height: 100vh;
-  }
+html, body, #root
+{
+    height: 100vh;
+}
 
-  body{
-      background: var(--color-background);
-  }
+body
+{
+    background-color: var(--color-background);
+}
 
-  #root{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
+#root
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
-  body, input, button, textarea{
-      font:500 1.6rem Poppins;
-      color: var(--color-text-base);
-  }
+body, input, button, textarea
+{
+    font-family: Poppins;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-text-base);
+}
 
-  .container{
-      width: 90vw;
-      max-width: 700px;
-  }
+.container
+{
+    max-width: 700px;
+    width: 90%;
+}
 
-  @media (min-width: 700px){
-      :root{
-          font-size: 62.5%;
-      }
-  }
+@media (min-width: 700px)
+{
+    :root
+    {
+        font-size: 62.5%;
+    }
+}
