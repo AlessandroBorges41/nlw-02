@@ -15,6 +15,12 @@ const styles = StyleSheet.create(
         justifyContent: 'space-between' //Separa a seta e o texto na barra do cabeçalho colocando ambos nas extremidades opostas 
     },
 
+    header:{
+        flexDirection: 'row',
+        alignItems: "center",
+        justifyContent: 'space-between',
+    },
+
     title:
     {
         fontFamily: 'Archivo_700Bold',

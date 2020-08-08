@@ -43,9 +43,9 @@ function TeacherList()
 
     async function searchTeachers(e: FormEvent)
     {
-        e.preventDefault()
-        const res = await api.get('classes', {params: {subject, week_day, time}})
-        setTeachers(res.data)
+        e.preventDefault();
+        const res = await api.get('classes', {params: {subject, week_day, time}});
+        setTeachers(res.data);
     }
 
     return (

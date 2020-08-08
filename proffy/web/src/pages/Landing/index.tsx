@@ -21,7 +21,7 @@ function Landing()
             const {total} = response.data
             setTotalConnections(total)
         })
-    }, [])
+    }, []);
 
     return (
         <div id="page-landing">

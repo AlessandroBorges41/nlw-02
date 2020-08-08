@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Image, Text } from 'react-native';
 
 /* Usando RectButton para adaptar o efeito do button para o sistema operacional que está sendo usado*/
@@ -11,12 +11,25 @@ import studyIcon from '../../assets/images/icons/study.png';
 import giveClassesIcon from '../../assets/images/icons/give-classes.png';
 import heartIcon from '../../assets/images/icons/heart.png';
 
+import api from '../../services/api';
+
 import styles from  './styles';
+
 
 
 function Landing()
 {
     const {navigate} = useNavigation();
+    const [totalConnections, setTotalConnections] = useState(0)
+
+    useEffect(() => {
+        /*Obtendo valor por meio da api no server*/
+        api.get('connections').then(response =>
+        {
+            const {total} = response.data
+            setTotalConnections(total)
+        })
+    }, []);
     
     /*Usado para navegar para rota Study ou GiveClasses*/
     function handleNavigateToStudyPages()
@@ -56,7 +69,7 @@ function Landing()
             </View>
 
             <Text style={styles.totalConnections}>
-                Total de 305 conexões já realizadas {' '}
+                Total de {totalConnections} conexões já realizadas {' '}
                 <Image source={heartIcon} />
             </Text>
         </View>
