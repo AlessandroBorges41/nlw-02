@@ -35,11 +35,11 @@ const week_days =
 
 function TeacherList()
 {
-    const [teachers, setTeachers] = useState([])
+    const [teachers, setTeachers] = useState([]);
 
-    const [subject, setSubject] = useState('')
-    const [week_day, setWeekDay] = useState('')
-    const [time, setTime] = useState('')
+    const [subject, setSubject] = useState('');
+    const [week_day, setWeekDay] = useState('');
+    const [time, setTime] = useState('');
 
     async function searchTeachers(e: FormEvent)
     {
